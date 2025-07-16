@@ -1,0 +1,13 @@
+{
+  "name": "cloud-ide-platform",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
+    "dev:web": "npm -C apps/web run dev",
+    "dev:api": "npm -C apps/api run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
