@@ -1,0 +1,81 @@
+/* EditorPage.css - Modern IDE Style */
+
+.editor-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1e1e1e;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+/* Top Navbar */
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 0 16px;
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.editor-header .logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.editor-header .logo span {
+  color: #22c55e;
+}
+
+.editor-header .actions {
+  display: flex;
+  gap: 12px;
+}
+
+.save-button {
+  background-color: #22c55e;
+  color: white;
+  padding: 6px 14px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.save-button:hover {
+  background-color: #16a34a;
+}
+
+.save-button:disabled {
+  background-color: #14532d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Editor container */
+.editor-container {
+  flex: 1;
+  height: calc(100vh - 48px); /* Account for header height */
+  overflow: hidden;
+}
+
+/* Optional status bar at bottom */
+.status-bar {
+  position: absolute;
+  bottom: 20px;
+  width: 97%;
+  height: 26px;
+  padding: 0 12px;
+  background-color: #2d2d2d;
+  color: #aaa;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #3c3c3c;
+}
